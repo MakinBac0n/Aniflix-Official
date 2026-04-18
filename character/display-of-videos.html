@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aniflix Gallery</title>
+  <link rel="icon" href="Website logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="grid-style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="header-logo-link" href="display-of-videos.html" aria-label="Aniflix home">
+      <img class="header-logo" src="Website logo.png" alt="Aniflix" />
+    </a>
+    <div class="header-actions" aria-label="Account actions">
+      <button class="header-btn" type="button">Login</button>
+      <button class="header-btn header-btn-strong" type="button">Sign Up</button>
+      <img class="profile-avatar" src="TemplateCharacter-x6.png" alt="Default profile" />
+    </div>
+  </header>
+
+  <main class="gallery-screen">
+    <section class="gallery-panel">
+      <h1>Pick a Video</h1>
+      <p class="gallery-copy">Watch a video to unlock its character.</p>
+
+      <div class="grid-container">
+        <button class="grid-item" type="button" onclick="goToAnime('hxh')">
+          <img src="hunterxhunter.png" alt="Hunter x Hunter" />
+          <span>Hunter x Hunter</span>
+        </button>
+
+        <button class="grid-item" type="button" onclick="goToAnime('chainsaw')">
+          <img src="chainsawman.png" alt="Chainsaw Man" />
+          <span>Chainsaw Man</span>
+        </button>
+
+        <button class="grid-item" type="button" onclick="goToAnime('onepiece')">
+          <img src="onepiece.png" alt="One Piece" />
+          <span>One Piece</span>
+        </button>
+
+        <button class="grid-item" type="button" onclick="goToAnime('lain')">
+          <img src="seriallain.png" alt="Serial Experiments Lain" />
+          <span>Serial Experiments Lain</span>
+        </button>
+      </div>
+
+      <a class="gallery-link" href="character.html">My Characters</a>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

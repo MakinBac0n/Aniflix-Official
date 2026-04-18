@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aniflix Unlock</title>
+  <link rel="icon" href="Website logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="elements.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="header-logo-link" href="display-of-videos.html" aria-label="Aniflix home">
+      <img class="header-logo" src="Website logo.png" alt="Aniflix" />
+    </a>
+    <div class="header-actions" aria-label="Account actions">
+      <button class="header-btn" type="button">Login</button>
+      <button class="header-btn header-btn-strong" type="button">Sign Up</button>
+      <img class="profile-avatar" src="TemplateCharacter-x6.png" alt="Default profile" />
+    </div>
+  </header>
+
+  <main class="unlock-screen">
+    <section class="unlock-panel">
+      <h1>Unlock Your Character</h1>
+
+      <div id="player-container">
+        <div id="videoFrame"></div>
+      </div>
+
+      <p id="status">Watch the full video to unlock.</p>
+
+      <button id="unlockBtn" class="button" type="button" disabled>
+        Unlock Character
+      </button>
+
+      <a class="back-link" href="display-of-videos.html">Back to Gallery</a>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

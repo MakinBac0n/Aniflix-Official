@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aniflix</title>
+  <link rel="icon" href="Website logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="character.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="header-logo-link" href="display-of-videos.html" aria-label="Aniflix home">
+      <img class="header-logo" src="Website logo.png" alt="Aniflix" />
+    </a>
+    <div class="header-actions" aria-label="Account actions">
+      <button class="header-btn" type="button">Login</button>
+      <button class="header-btn header-btn-strong" type="button">Sign Up</button>
+      <img class="profile-avatar" src="TemplateCharacter-x6.png" alt="Default profile" />
+    </div>
+  </header>
+
+  <main class="selector-screen">
+    <section class="intro">
+      <h1>Choose your character</h1>
+      <p>Start with your default character or swap into someone you have collected.</p>
+    </section>
+
+    <section class="carousel" aria-label="Character selector">
+      <button class="nav-btn" id="leftBtn" type="button" aria-label="Previous character">
+        <span aria-hidden="true">&lsaquo;</span>
+      </button>
+
+      <article class="character-stage">
+        <p class="status" id="selectedStatus">Default</p>
+        <img id="selectedImage" src="TemplateCharacter-x6.png" alt="Default character" />
+        <h2 id="selectedName">Default Character</h2>
+      </article>
+
+      <button class="nav-btn" id="rightBtn" type="button" aria-label="Next character">
+        <span aria-hidden="true">&rsaquo;</span>
+      </button>
+    </section>
+
+    <div class="thumbnail-row" id="thumbnailRow" aria-label="Collected characters"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

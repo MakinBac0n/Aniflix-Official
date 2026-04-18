@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aniflix Video</title>
+  <link rel="icon" href="Website logo.png" />
+  <link rel="stylesheet" href="elements.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="header-logo-link" href="display-of-videos.html" aria-label="Aniflix home">
+      <img class="header-logo" src="Website logo.png" alt="Aniflix" />
+    </a>
+    <div class="header-actions" aria-label="Account actions">
+      <button class="header-btn" type="button">Login</button>
+      <button class="header-btn header-btn-strong" type="button">Sign Up</button>
+      <img class="profile-avatar" src="TemplateCharacter-x6.png" alt="Default profile" />
+    </div>
+  </header>
+
+  <main class="unlock-screen">
+    <section class="unlock-panel">
+      <h1 id="videoTitle">Watch this video</h1>
+
+      <div id="player-container">
+        <div id="player"></div>
+      </div>
+
+      <p id="status">Character locked! Watch the full video to unlock.</p>
+
+      <button id="unlockBtn" class="button" type="button" disabled>
+        Unlock Character
+      </button>
+
+      <a class="back-link" href="display-of-videos.html">Choose Another Video</a>
+    </section>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const anime = params.get("anime") || "hxh";
+    const scripts = {
+      hxh: "script1.js",
+      chainsaw: "script2.js",
+      onepiece: "script3.js",
+      lain: "script4.js"
+    };
+    const selectedScript = scripts[anime] || scripts.hxh;
+    const videoScript = document.createElement("script");
+    videoScript.src = selectedScript;
+    videoScript.onload = () => {
+      const youtubeScript = document.createElement("script");
+      youtubeScript.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(youtubeScript);
+    };
+    document.body.appendChild(videoScript);
+  </script>
+</body>
+</html>
